@@ -1,0 +1,62 @@
+@font-face {
+    font-family: pixelcafe_advanced;
+    src: url('../fonts/PixelCafe Advanced (1).woff') format('woff');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: pixelcafe_advanced;
+    src: url('../fonts/PixelCafe Advanced (2).woff') format('woff');
+    font-weight: bold;
+}
+
+.textbox {
+    font-family: pixelcafe_advanced;
+    color: #f9e9dd;
+    position: relative;
+    z-index: 2;
+    font-weight: normal; /* Ensure normal weight for the main text */
+    width: 37.5em;
+    height: 12vh;
+    word-spacing: 5px;
+}
+
+.textbox::before {
+    content: attr(data-text); /* Use the data attribute to get the bold text */
+    font-family: pixelcafe_advanced;
+    font-weight: bold;
+    color: #8b738d;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 100vh; /* Optional: adjust based on your needs */
+    flex-direction: column;
+}
+
+.center {
+    max-width: 100%;
+    height: auto;
+}
+
+.appear {
+    animation: appear 2s steps(4)
+}
+.hidden {
+    opacity: 0;
+}
+body {
+    background-color: #604e61;
+    overflow: hidden;
+}
+
+@keyframes appear {
+    from {opacity: 0;}
+  to {opacity: 1;}
+}
