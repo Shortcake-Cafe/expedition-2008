@@ -1,4 +1,5 @@
-// No secrets here chump!
+// No deeper secrets here chump!
+// What you see is what you get.
 
 let hasIntroStarted = false;
 var elem = document.documentElement;
@@ -24,10 +25,23 @@ let rngDialog = [
     "This was her decision, she descended willingly.",
     "Yeah, I do not miss this.",
     "I was in too much of a hurry to talk, I wonder if she was nice?",
-    "Shed knows I hate expeditions, so why do I always end up down here!",
+    "Shed knows I hate this place. That's probably why she picked me out of everybody.",
     "Our entry point is still active, meaning he's down here somewhere...",
     "Anything?... Nope just cobwebs.",
-    "Not a single person down here anymore."
+    "Not a single person down here anymore.",
+    "A lot of corridors around here lead to nothing.",
+    "I was so stressed out back then, I never got a good look at the stuff down here.",
+    "I don't understand what Shed sees in this place.",
+    "How the years go by.",
+    "And now my cap is all dirty, great.",
+    "What are we even hoping to find here?",
+    "You'd think the company would pivot after what happened here.",
+    "I wonder if that dog is okay.",
+    "Wacky.",
+    "The doctor's money can only take us so far, Shed.",
+    "I think Shed wants to explore even deeper. Sound like a dumb idea if you ask me.",
+    "I wish I still had my mail carrier job. Actually... No scratch that, this is somehow better.",
+    "...",
 ]
 
 function openFullscreen() {
@@ -46,7 +60,7 @@ function typeAnimationRecall(text) {
     if (index < text.length) {
         writeLine(text.substr(0, index + 1)); // Display text up to the current index
         index++;
-        setTimeout(() => typeAnimationRecall(text), 50); // Use an arrow function to correctly pass the function reference
+        setTimeout(() => typeAnimationRecall(text), 20); // Use an arrow function to correctly pass the function reference
     }
     else
     {
@@ -90,7 +104,7 @@ document.addEventListener('click', function(event) {
     if(!hasIntroStarted)
     {
         beat.play();
-        //openFullscreen()
+        openFullscreen()
         hasIntroStarted = true;
         imgElem.classList.add("appear");
         imgElem.classList.remove("hidden");
